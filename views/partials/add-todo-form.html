@@ -1,0 +1,22 @@
+<div
+  hx-post="/todo"
+  hx-trigger="submit"
+  hx-target="#todo-rows"
+  hx-swap="beforeend"
+>
+  <h2>Add Todo</h2>
+  <form id="add-todo-form" hx-post="todo">
+    <label class="form-label" for="description">Description</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        id="description-input"
+        required
+        type="text"
+        name="description"
+        id="description"
+      />
+      <button class="btn btn-primary" type="submit">Add Todo</button>
+    </div>
+  </form>
+</div>

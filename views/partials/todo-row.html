@@ -1,0 +1,20 @@
+<tr id="todo-{{.ID}}-row">
+  <td>
+    <span {{if .Done}}style="text-decoration:line-through" {{end}}
+      >{{ .Description }}</span
+    >
+  </td>
+  <td id="todo-{{.ID}}-state" class="todo-state">
+    {{if .Done}} DONE {{else}} NOT DONE {{end}}
+  </td>
+  <td>
+    <button
+      class="btn {{if .Done}} btn-warning {{else}} btn-success {{end}}"
+      hx-put="/todo/{{ .ID}}/toggle"
+      hx-target="#todo-{{.ID}}-row"
+    >
+      Mark as {{if .Done}} NOT DONE {{else}} DONE {{end}}
+    </button>
+    <button class="btn btn-danger" hx-delete="/todo/{{.ID}}">DELETE</button>
+  </td>
+</tr>

@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+td {
+  padding: 10px;
+}
+.todo-state {
+  min-width: 100px;
+}
+
+th {
+  text-align-last: left;
+  padding: 10px;
+  border-bottom: 2px solid gray;
+}

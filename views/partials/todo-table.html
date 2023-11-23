@@ -1,0 +1,10 @@
+<table id="todo-table" class="table">
+  <thead>
+    <th>Description</th>
+    <th colspan="2">State</th>
+  </thead>
+  <tbody id="todo-rows" hx-target="closest tr" hx-swap="outerHTML swap:1s">
+    {{range $index, $element := .Todos}} {{template "partials/todo-row"
+    $element}} {{end}}
+  </tbody>
+</table>
